@@ -6,6 +6,7 @@
 pub mod const_parse;
 pub mod led;
 pub mod math;
+pub mod peripherals;
 
 #[cfg(test)]
 mod tests {
