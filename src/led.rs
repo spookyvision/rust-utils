@@ -1,4 +1,4 @@
-use crate::const_parse::*;
+use crate::str::const_parse::*;
 pub struct LedConfig {
     pub w: usize,
     pub h: usize,
@@ -31,7 +31,7 @@ impl LedConfig {
     }
 }
 
-pub fn ziggy_components<const ROW_LEN: usize, T>(data: &[T]) -> impl Iterator<Item = &T>
+pub fn ziggy_components<T, const ROW_LEN: usize>(data: &[T]) -> impl Iterator<Item = &T>
 where
     T: Sized,
 {
