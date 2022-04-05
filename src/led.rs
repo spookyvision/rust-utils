@@ -44,14 +44,22 @@ where
             let boi = chunky_boi.iter();
 
             if idx % 2 == 0 {
-                itertools::Either::Left(boi.rev())
-            } else {
                 itertools::Either::Right(boi)
+            } else {
+                itertools::Either::Left(boi.rev())
             }
         })
         .flatten();
 
     ziggy
+}
+
+#[test]
+fn it_ziggys() -> Result<(), Box<dyn std::error::Error>> {
+    let arr = [1u8, 2, 3, 4, 5, 6, 7, 8, 9];
+    let zigged: Vec<_> = ziggy_components::<_, 3>(&arr).cloned().collect();
+    assert_eq!(&[1u8, 2, 3, 6, 5, 4, 7, 8, 9], zigged.as_slice());
+    Ok(())
 }
 
 // needs #![feature(generic_const_exprs)]
