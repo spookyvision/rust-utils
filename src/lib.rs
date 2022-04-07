@@ -1,7 +1,6 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 #![feature(slice_as_chunks)]
-// for ziggy bytes
-//#![feature(generic_const_exprs)]
+#![feature(generic_const_exprs)]
 
 pub mod led;
 pub mod math;
