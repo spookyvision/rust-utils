@@ -7,9 +7,6 @@ pub mod math;
 pub mod peripherals;
 pub mod str;
 
-#[cfg(feature = "serde")]
-pub mod serde;
-
 #[cfg(test)]
 mod tests {
     #[test]

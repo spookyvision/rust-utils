@@ -13,10 +13,6 @@ pub mod const_parse {
     // - Added convenience function parse_unwrap
     // - Added tests
 
-    #![feature(const_if_match)]
-    #![feature(const_panic)]
-    #![feature(const_fn)]
-
     #[derive(Clone, Copy, Debug)]
     pub enum ParseIntError {
         InvalidDigit,
